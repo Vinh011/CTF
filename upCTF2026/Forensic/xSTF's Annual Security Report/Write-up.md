@@ -4,8 +4,6 @@
 
 - **Tên bài**: `xSTF's Annual Security Report`
 - **Category**: Forensics
-- **File được cung cấp**: `2025-Security-Report.pdf`
-- **Flag**: `upCTF{V3ry_b4d_S3cUriTy_P0stUr3}`
 
 ---
 
@@ -226,20 +224,6 @@ Sau đó trích text:
 pdftotext out.pdf -
 ```
 
-Hoặc đọc trực tiếp bằng Python:
-
-```bash
-python3 - << 'PY'
-from pypdf import PdfReader
-
-r = PdfReader("appendix.pdf")
-r.decrypt("Maki")
-
-for p in r.pages:
-    print(p.extract_text())
-PY
-```
-
 ---
 
 ## Bước 8: Lấy flag
@@ -273,94 +257,6 @@ Toàn bộ hướng giải của challenge này là:
 7. Thu được password là `Maki`
 8. Giải mã `appendix.pdf`
 9. Đọc nội dung và lấy flag
-
----
-
-## Vì sao bài này hay
-
-Challenge này khá điển hình cho tư duy forensic:
-
-- File “nhìn bình thường” nhưng thực tế có **attachment ẩn**
-- Attachment lại là một **lớp bảo vệ thứ hai** bằng mật khẩu
-- Password không hiện ra ngay với wordlist cơ bản, nhưng lại crack được khi bật **rules**
-
-Bài nhắc lại một kỹ năng rất quan trọng:  
-**Đừng chỉ nhìn nội dung hiển thị của PDF, hãy luôn kiểm tra object/attachment/metadata/file nhúng.**
-
----
-
-## Một số lệnh hữu ích cho các bài PDF forensic tương tự
-
-### Liệt kê attachment
-```bash
-pdfdetach -list file.pdf
-```
-
-### Extract attachment
-```bash
-pdfdetach -saveall file.pdf
-```
-
-### Xem thông tin PDF
-```bash
-pdfinfo file.pdf
-```
-
-### Kiểm tra mã hóa
-```bash
-qpdf --show-encryption file.pdf
-```
-
-### Tạo hash cho John
-```bash
-python3 /usr/share/john/pdf2john.py file.pdf > hash.txt
-```
-
-### Crack với wordlist
-```bash
-john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
-```
-
-### Crack với rules
-```bash
-john --wordlist=/usr/share/wordlists/rockyou.txt --rules hash.txt
-```
-
-### Xem password đã crack
-```bash
-john --show --format=PDF hash.txt
-```
-
-### Giải mã PDF
-```bash
-qpdf --password='PASSWORD' --decrypt file.pdf out.pdf
-```
-
----
-
-## Kết luận
-
-Đây là một bài forensic khá thẳng hướng nhưng dễ mắc bẫy nếu chỉ đọc nội dung PDF bằng mắt thường.
-
-Điểm mấu chốt là:
-
-- **PDF gốc chỉ là mồi**
-- **flag nằm trong attachment `appendix.pdf`**
-- **`appendix.pdf` được bảo vệ bằng password**
-- **password là `Maki`**
-- **flag cuối cùng là `upCTF{V3ry_b4d_S3cUriTy_P0stUr3}`**
-
----
-
-## Solve script ngắn gọn
-
-```bash
-pdfdetach -saveall 2025-Security-Report.pdf
-python3 /usr/share/john/pdf2john.py appendix.pdf > hash.txt
-john --wordlist=/usr/share/wordlists/rockyou.txt --rules hash.txt
-qpdf --password='Maki' --decrypt appendix.pdf out.pdf
-pdftotext out.pdf -
-```
 
 ---
 
