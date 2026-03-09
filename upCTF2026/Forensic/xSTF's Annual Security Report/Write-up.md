@@ -5,6 +5,8 @@
 - **Tên bài**: `xSTF's Annual Security Report`
 - **Category**: Forensics
 
+
+<img width="750" height="396" alt="image" src="https://github.com/user-attachments/assets/84bf3dfe-1e58-4983-a2f7-3084905552f7" />
 ---
 
 ## Mô tả đề bài
