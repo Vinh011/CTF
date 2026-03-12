@@ -8,6 +8,7 @@
 | **Thể loại** | Forensics |
 | **Mô tả** | Tìm flag trong một file ảnh đĩa (disk image) |
 | **Gợi ý** | *"Sloppy timestomping can yield strange (very old) timestamps"* |
+[Link file](https://challenge-files.picoctf.net/c_plain_mesa/aa1f8ba93409887e081435732d7037c45b30a8442853bf07c9e84fe4d0e0bc19/partition4.img.gz)
 ---
 
 <img width="954" height="534" alt="image" src="https://github.com/user-attachments/assets/d12ca619-4c44-4816-bf21-fe7efd47d0f9" />
