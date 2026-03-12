@@ -6,6 +6,7 @@
 -   **Mô tả:** Tìm flag trong một file disk image (`.dd`) đã bị xóa
     file.\
 -   **Hint:** Làm thế nào để tìm kiếm các file đã bị xóa?
+-   [link](https://challenge-files.picoctf.net/c_plain_mesa/ccb8edf69ba68d0d3dad5908c569e1306f75605b12327a94893e0f41bdd1597a/disko-4.dd.gz)
 
 <img width="947" height="532" alt="image" src="https://github.com/user-attachments/assets/3bde79d8-febf-473c-ae60-f7553abc5b85" />
 
