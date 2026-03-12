@@ -2,7 +2,10 @@
 # 🚩 Write-up: picoCTF – Forensics Git 0
 
 ## 1. Phân tích 
+<img width="701" height="548" alt="image" src="https://github.com/user-attachments/assets/166a8787-a43a-4aa5-a0d4-251284fcce15" />
+---
 
+[Link](https://challenge-files.picoctf.net/c_plain_mesa/96db2eea3d6d3e215d3dc2289457a1bc10b17b1de69c46996a171f4f689db74b/disk.img.gz)
 
 ### Lệnh
 ```bash
