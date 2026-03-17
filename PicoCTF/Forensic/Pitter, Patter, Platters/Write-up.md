@@ -4,6 +4,7 @@
 - Category: Forensics
 - Difficulty: Medium
 - File: [`suspicious.dd.sda1`](https://challenge-files.picoctf.net/c_shape_facility/694515a76dfa29953964179c00823d28ba592dbddeac76df3b4ae6fd9414f6dc/suspicious.dd.sda1)
+<img width="940" height="709" alt="image" src="https://github.com/user-attachments/assets/bf0db1cf-972d-4c65-a759-4d10c6f21c08" />
 
 ---
 
