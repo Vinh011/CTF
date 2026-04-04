@@ -1,6 +1,6 @@
-# 🚩 Write-up: picoCTF - DISKO 4
+# Write-up: picoCTF - DISKO 4
 
-## 📖 Thông tin bài tập
+## Thông tin
 
 -   **Thể loại:** Forensics\
 -   **Mô tả:** Tìm flag trong một file disk image (`.dd`) đã bị xóa
@@ -12,7 +12,7 @@
 
 ------------------------------------------------------------------------
 
-# Tư duy hướng giải
+# Tư duy
 
 Trong **Digital Forensics**, khi một file bị xóa trên hệ thống tệp (ví
 dụ **FAT32 hoặc NTFS**), dữ liệu thực tế **không biến mất ngay lập
@@ -38,7 +38,7 @@ Ta cần: - Tìm **metadata của file đã xóa** - Trích xuất dữ liệu t
 
 ------------------------------------------------------------------------
 
-# 🛠 Công cụ sử dụng
+# Công cụ
 
   Tool       Mục đích
   ---------- ----------------------------------
@@ -50,7 +50,7 @@ Ta cần: - Tìm **metadata của file đã xóa** - Trích xuất dữ liệu t
 
 ------------------------------------------------------------------------
 
-# 👣 Các bước thực hiện
+# Các bước
 
 ## Bước 1: Nhận diện định dạng ổ đĩa
 
