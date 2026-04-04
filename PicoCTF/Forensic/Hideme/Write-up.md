@@ -4,7 +4,7 @@
 
 ---
 
-# 1.Mô tả
+## 1.Mô tả
 
 Bài cung cấp một file ảnh:
 
@@ -24,7 +24,7 @@ Khi mở ảnh bằng trình xem ảnh bình thường thi chỉ thấy **logo p
 
 ---
 
-# 2. Kiểm tra loại file
+## 2. Kiểm tra loại file
 
 Sử dụng lệnh:
 
@@ -44,7 +44,7 @@ Tuy nhiên trong CTF, file có thể chứa **dữ liệu ẩn phía sâu ảnh*
 
 ---
 
-# 3. Kiểm tra chuỗi trong file
+## 3. Kiểm tra chuỗi trong file
 
 Sử dụng:
 
@@ -70,7 +70,7 @@ secret/flag.png
 
 ---
 
-# 4. Phân tích hex của file
+## 4. Phân tích hex của file
 
 Sử dụng: 
 
@@ -100,7 +100,7 @@ PK
 
 ---
 
-# 5. Phân tích bằng binwalk
+## 5. Phân tích bằng binwalk
 Sử dụng công cụ forensic:
 ```bash
 binwalk flag.png
@@ -124,7 +124,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 ---
 
-# 6. Extract dữ liệu ẩn
+## 6. Extract dữ liệu ẩn
 
 Sử dụng:
 ```bash
@@ -144,7 +144,7 @@ Sau khi chạy, binwalk sẽ tạo thư mục:
 ```
 
 ---
-# 7. Lấy flag
+## 7. Lấy flag
 
 Mở file:
 
