@@ -1,4 +1,4 @@
-# Write-up: picoCTF 2019 - c0rrupt (Forensics)
+# Write-up: c0rrupt
 
 ## 1. Tổng quan
 
