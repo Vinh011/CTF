@@ -1,1 +1,1 @@
-# Write up TryHackMe
+# Write up
