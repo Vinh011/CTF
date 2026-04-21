@@ -109,7 +109,7 @@ print(decrypted.decode('utf-8', errors='ignore').strip())
 
 ------------------------------------------------------------------------
 
-## 🎯 Insight quan trọng
+## Insight quan trọng
 
 -   AES mạnh về toán học nhưng yếu khi triển khai phần cứng
 -   Side-channel attack khai thác rò rỉ vật lý, không phá thuật toán
