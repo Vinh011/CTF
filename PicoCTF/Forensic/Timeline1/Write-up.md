@@ -66,7 +66,7 @@ fdisk -l partition4.img
 
 # 3. Các bước giải chi tiết
 
-## Bước 1: Trích xuất Metadata (Body File)
+## Trích xuất Metadata (Body File)
 
 Sử dụng `fls` để quét toàn bộ hệ thống tập tin.
 
@@ -86,7 +86,7 @@ File kết quả: **timeline.body**
 
 ------------------------------------------------------------------------
 
-## Bước 2: Chuyển đổi thành Timeline dễ đọc
+## Chuyển đổi thành Timeline dễ đọc
 
 Sử dụng `mactime` để chuyển dữ liệu raw thành timeline.
 
@@ -105,7 +105,7 @@ Kết quả thu được: **timeline.txt**
 
 ------------------------------------------------------------------------
 
-## Bước 3: Phân tích Timeline
+## Phân tích Timeline
 
 Tìm các file mới được tạo.
 
@@ -131,7 +131,7 @@ thấy có dấu hiệu **anti-forensics**.
 
 ------------------------------------------------------------------------
 
-## Bước 4: Truy xuất dữ liệu bằng Inode
+##Truy xuất dữ liệu bằng Inode
 
 Thay vì đọc file theo đường dẫn, ta truy xuất trực tiếp từ **inode**.
 
@@ -151,7 +151,7 @@ icat partition4.img 32716
 
 ------------------------------------------------------------------------
 
-## Bước 5: Giải mã Base64
+## Giải mã Base64
 
 Chuỗi trên là **Base64**.
 
@@ -165,35 +165,10 @@ echo "NTczNDE3aDEzcl83aDRuXzdoM18xNDU3XzU4NTI3YmIyMjIK" | base64 -d
 
 ------------------------------------------------------------------------
 
-# 4. Tổng kết công cụ
 
-  Công cụ     Option      Ý nghĩa
-  ----------- ----------- ------------------------------------
-  `fls`       `-r`        Quét toàn bộ hệ thống tập tin
-              `-m`        Tạo **body file** cho mactime
-  `mactime`   `-b`        Tạo timeline từ body file
-  `icat`      `(inode)`   Trích xuất file trực tiếp từ inode
-  `base64`    `-d`        Giải mã Base64
-
-------------------------------------------------------------------------
-
-# 5. Flag
+## 5. Flag
 
     picoCTF{573417h13r_7h4n_7h3_1457_58527bb222}
 
 ------------------------------------------------------------------------
 
-# 6. Kiến thức rút ra
-
--   **Timeline Analysis** là kỹ thuật cực kỳ quan trọng trong Digital
-    Forensics.
--   Metadata của file có thể tiết lộ:
-    -   thời gian tạo
-    -   chỉnh sửa
-    -   truy cập
--   **Anti-forensics** (ví dụ `shred`) thường để lại dấu vết trong
-    timeline.
--   Có thể truy xuất file **đã bị xóa** bằng cách đọc trực tiếp
-    **inode**.
-
-------------------------------------------------------------------------
